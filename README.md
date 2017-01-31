@@ -33,7 +33,7 @@ In case of any errors, missing dependencies or more info, refer to [torch-rnn](h
 
 ## Results
 
-A 3-layer character level LSTM network with 512 hidden units in each layer is trained on the jokes dataset for 24 hours (~30 epochs and 109000 iterations) with NVIDIA Tesla K40 GPU. Samples can be drawn using the trained checkpoint file available at `src/saved_checkpoints/`. 
+A 3-layer character level LSTM network with 512 hidden units in each layer is trained individually on both the datasets with NVIDIA Tesla K40 GPU. Samples can be drawn using the trained checkpoint files available at `src/saved_checkpoints/`. 
 
 
 ## Contributions and TODOs
