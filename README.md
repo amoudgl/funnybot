@@ -37,7 +37,7 @@ A 3-layer character level LSTM network with 512 hidden units in each layer is tr
 
 
 ## Contributions and TODOs
-* Data compiled from `utils/friends.py` contains many extra headers, which were [manually removed](https://github.com/abhinavmoudgil95/funnybot/commit/f2e901bb1f597b1966ac4033d447f86fc951e438). It would be great if this task could be automated. 
+* Data compiled from `utils/friends.py` contains many extra headers, which were manually removed. It would be great if this task could be automated. 
 * It has been attempted to keep the dataset as clean as possible. So, relevant additions to the jokes dataset are welcome. 
 * Currently results are sampled using a 3 hidden layer LSTM network with 512 hidden units in each layer. However, if there exists a more optimal model that generates better results, please feel free to report or send a pull request.
 
