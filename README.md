@@ -8,6 +8,8 @@ This is an attempt to create a funny bot trained on a corpus of jokes. The goal 
 
 * **F.R.I.E.N.D.S**: As a fun task, transcripts of all the episodes of TV Series F.R.I.E.N.D.S are compiled into a single text file of 4.6MB (`/data/friends.txt`) using `utils/friends.py` script. The intent is to generate funny text similar to the dialogues in the series. The script is ad-hoc as of now, so contributions are welcome. 
 
+> There have been lot of additions to Jokes dataset since the last update of this README. Web scraping is still going on. Exact details of the complete dataset will be soon posted here. 
+
 ## Dependencies
 
 * **Python**  - Crawling websites and preprocessing.
