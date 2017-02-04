@@ -10,7 +10,7 @@ season = soup.find_all("ul")
 prefix = "http://www.livesinabox.com/friends/"
 filename = "friends.txt"
 filepath = "../data/" + filename
-f = open(filepath, 'a')
+f = open(filepath, 'w')
 # for each season
 for i in xrange(len(season)):
 
@@ -32,3 +32,5 @@ for i in xrange(len(season)):
 		f.write(text.encode('utf8'))
 		f.write((u"\n").encode('utf8'))
 	print ("Finished writing Season %d to file %s" %(i + 1, filepath))
+
+f.close()
