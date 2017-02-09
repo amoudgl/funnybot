@@ -4,11 +4,9 @@ This is an attempt to create a funny bot trained on a corpus of jokes. The goal 
 
 ## Datasets
 
-* **Jokes**: Variety of jokes are crawled from online websites using python crawler scripts (can be found at `utils/crawlers/`). Jokes from each website are compiled into a csv file with the format: “serial number, joke” which can be found in the `data/` folder. All these csv files are compiled into one `data/all-jokes.csv` using `utils/combine_data.py` script. Hence the final dataset (`data/all-jokes.csv`) consists of 32728 jokes. For the language model, it is trimmed and written into a separate text file `data/all-jokes.txt` using `utils/csv_to_text.py` script.  
+* **[Short Jokes](https://www.kaggle.com/abhinavmoudgil95/short-jokes)**: It contains 231,657 short jokes and oneliners. For the language model, csv file of the dataset is processed and written to a seperate text file `data/shortjokes.txt` with `utils/csv_to_text.py`. 
 
 * **F.R.I.E.N.D.S**: As a fun task, transcripts of all the episodes of TV Series F.R.I.E.N.D.S are compiled into a single text file of 4.6MB (`/data/friends.txt`) using `utils/friends.py` script. The intent is to generate funny text similar to the dialogues in the series. The script is ad-hoc as of now, so contributions are welcome. 
-
-> There have been lot of additions to Jokes dataset since the last update of this README. Web scraping is still going on. Exact details of the complete dataset will be soon posted here. 
 
 ## Dependencies
 
@@ -35,7 +33,7 @@ In case of any errors, missing dependencies or more info, refer to [torch-rnn](h
 
 ## Results
 
-A 3-layer character level LSTM network with 512 hidden units in each layer is trained individually on both the datasets with NVIDIA Tesla K40 GPU. Samples can be drawn using the trained checkpoint files available at `src/saved_checkpoints/`. 
+A 3-layer character level LSTM network with 512 hidden units in each layer is trained on the F.R.I.E.N.D.S dataset with NVIDIA Tesla K40 GPU. Samples can be drawn using the trained checkpoint files available at `src/saved_checkpoints/friends/`. 
 
 
 ## Contributions and TODOs
