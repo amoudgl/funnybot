@@ -6,19 +6,18 @@ This is an attempt to create a funny bot trained on a corpus of jokes. The goal 
 
 * **[Short Jokes](https://www.kaggle.com/abhinavmoudgil95/short-jokes)**: It contains 231,657 short jokes and oneliners. For the language model, csv file of the dataset is processed and written to a seperate text file `data/shortjokes.txt` with `utils/csv_to_text.py`. 
 
-* **F.R.I.E.N.D.S**: As a fun task, transcripts of all the episodes of TV Series F.R.I.E.N.D.S are compiled into a single text file of 4.6MB (`/data/friends.txt`) using `utils/friends.py` script. The intent is to generate funny text similar to the dialogues in the series. The script is ad-hoc as of now, so contributions are welcome. 
+* **F.R.I.E.N.D.S**: As a fun task, transcripts of all the episodes of TV Series F.R.I.E.N.D.S are compiled into a single text file of 4.79MB (`/data/friends.txt`) using `utils/friends.py` script. The intent is to generate funny text similar to the dialogues in the series. The script is ad-hoc as of now, so contributions are welcome. 
 
 ## Dependencies
 
-* **Python**  - Crawling websites and preprocessing.
+* **Python**  - Preprocessing the dataset.
 * **Torch** - Language model is written in Torch. 
-* **BeautifulSoup** - A Python package for parsing HTML pages.
 
 ## Running Model
 
 Navigate to `/src/` folder and run the following commands: 
 ```bash
-python scripts/preprocess.py --input_txt ../data/all-jokes.txt  --output_h5 my_data.h5  --output_json my_data.json
+python scripts/preprocess.py --input_txt ../data/shortjokes.txt  --output_h5 my_data.h5  --output_json my_data.json
 th train.lua -input_h5 my_data.h5 -input_json my_data.json -model_type lstm -num_layers 3 -rnn_size 512
 ```
 This will start the training session of 50 epochs on jokes dataset and checkpoints are saved in `src/cv/` folder every 1000 iterations with names like `cv/checkpoint_1000.t7`. 
