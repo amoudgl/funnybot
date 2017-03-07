@@ -2,6 +2,8 @@
 
 This is an attempt to create a funny bot trained on a corpus of jokes. The goal of the project is to draw samples from a character level LSTM model, which should actually be funny. 
 
+Read my [blog post](https://abhinavmoudgil95.github.io/2017-03-01/funnybot/) for detailed analysis and results. 
+
 ## Datasets
 
 * **[Short Jokes](https://www.kaggle.com/abhinavmoudgil95/short-jokes)**: It contains 231,657 short jokes and oneliners. For the language model, csv file of the dataset is processed and written to a seperate text file `data/shortjokes.txt` with `utils/csv_to_text.py`. 
@@ -29,11 +31,6 @@ th sample.lua -checkpoint cv/checkpoint_3000.t7 -length 2000
 ````
 
 In case of any errors, missing dependencies or more info, refer to [torch-rnn](https://github.com/jcjohnson/torch-rnn). 
-
-## Results
-
-A 3-layer character level LSTM network with 512 hidden units in each layer is trained on the F.R.I.E.N.D.S dataset with NVIDIA Tesla K40 GPU. Samples can be drawn using the trained checkpoint files available at `src/saved_checkpoints/friends/`. 
-
 
 ## Contributions and TODOs
 * Data compiled from `utils/friends.py` contains many extra headers, which were manually removed. It would be great if this task could be automated. 
