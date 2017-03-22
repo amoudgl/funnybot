@@ -1,4 +1,4 @@
-#funnybot
+# funnybot
 
 This is an attempt to create a funny bot trained on a corpus of jokes. The goal of the project is to draw samples from a character level LSTM model, which should actually be funny. 
 
