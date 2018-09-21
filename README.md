@@ -4,6 +4,8 @@ This is an attempt to create a funny bot trained on a corpus of jokes. The goal 
 
 Read my [blog post](https://amoudgl.github.io/2017-03-01/funnybot/) for detailed analysis and results. 
 
+This project also got coverage in TED ideas: https://ideas.ted.com/can-you-teach-a-computer-to-be-funny/
+
 ## Datasets
 
 * **[Short Jokes](https://www.kaggle.com/abhinavmoudgil95/short-jokes)**: It contains 231,657 short jokes and oneliners. For the language model, csv file of the dataset is processed and written to a seperate text file `data/shortjokes.txt` with `utils/csv_to_text.py`. 
