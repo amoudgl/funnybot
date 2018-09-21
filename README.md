@@ -1,6 +1,6 @@
 # funnybot
 
-This is an attempt to create a funny bot trained on a corpus of jokes. The goal of the project is to draw samples from a character level LSTM model, which should actually be funny. 
+This is an attempt to create a funny bot trained on a corpus of jokes. The goal of the project is to draw samples which are actually funny, from a character level LSTM model.
 
 Read my [blog post](https://amoudgl.github.io/2017-03-01/funnybot/) for detailed analysis and results. 
 
